@@ -1,0 +1,10 @@
+{% extends "frontend.html" %}
+
+{% block content %}
+  <h1>Member List</h1>
+  <ul>
+    {% for member in members %}
+      <li><a href="{% url 'member-detail' member.id %}">{{ member.name }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

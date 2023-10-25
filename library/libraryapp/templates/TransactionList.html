@@ -1,0 +1,10 @@
+{% extends "frontend.html" %}
+
+{% block content %}
+  <h1>Transaction List</h1>
+  <ul>
+    {% for transaction in transactions %}
+      <li><a href="{% url 'transaction-detail' transaction.id %}">Transaction ID: {{ transaction.id }}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

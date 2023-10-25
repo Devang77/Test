@@ -1,0 +1,9 @@
+{% extends "frontend.html" %}
+
+{% block content %}
+  <h1>Member Detail</h1>
+  <p>Name: {{ member.name }}</p>
+  <p>Outstanding Debt: {{ member.outstanding_debt }}</p>
+
+  <a href="{% url 'member-list' %}">Back to Member List</a>
+{% endblock %}

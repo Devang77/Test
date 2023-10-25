@@ -1,0 +1,13 @@
+{% extends "frontend.html" %}
+
+{% block content %}
+  <h1>Transaction Detail</h1>
+  <p>Transaction ID: {{ transaction.id }}</p>
+  <p>Book: {{ transaction.book.title }}</p>
+  <p>Member: {{ transaction.member.name }}</p>
+  <p>Issue Date: {{ transaction.issue_date }}</p>
+  <p>Return Date: {{ transaction.return_date }}</p>
+  <p>Fee: {{ transaction.fee }}</p>
+
+  <a href="{% url 'transaction-list' %}">Back to Transaction List</a>
+{% endblock %}

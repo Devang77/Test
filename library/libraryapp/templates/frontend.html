@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Library</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="{% url 'book-list' %}">Books</a></li>
+            <li><a href="{% url 'member-list' %}">Members</a></li>
+            <li><a href="{% url 'issue-book' %}">Issue Book</a></li>
+        </ul>
+    </nav>
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>
+
+    <footer>
+        &copy; {{ year }} Library Management System
+    </footer>
+</body>
+</html>
